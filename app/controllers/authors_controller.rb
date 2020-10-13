@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
   def index
-    @authors = Author.all
+    @authors = Author.ordered_by_books
   end
 
   def show

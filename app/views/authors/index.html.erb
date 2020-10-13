@@ -2,6 +2,9 @@
 
 <ol class="ml-5">
   <%@authors.each do |author|%>
-    <li><%= link_to author.name, author %></li>
+    <li>
+      <%= link_to author.name, author %>
+      <em>(<%= pluralize author.book_count, "Top Book" %>)</em>
+    </li>
   <% end %>
 </ol>
