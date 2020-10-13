@@ -2,18 +2,31 @@
 
 <h2 class="title is-2"><%= @book.title %></h2>
 
-<p class="mb-2">
-<%= link_to @book.author.name, @book.author %>
-</p>
+<article class="message is-primary">
+  <div class="message-header">
+    <p>Author</p>
+  </div>
+  <div class="message-body">
+    <p >
+      <%= link_to @book.author.name, @book.author %>
+    </p>
+  </div>
+</article>
 
-<p class="mb-5">
-  <strong>Rating</strong>
-  <%= @book.average_ratings  %> / 5 ⭐
-</p>
+<article class="message is-dark">
+  <div class="message-header">
+    <p>Rating</p>
+  </div>
+  <div class="message-body">
+  <p class="mb-5">
+    <%= @book.average_ratings  %> / 5 ⭐
+  </p>
+  <progress class="progress is-danger" value="<%= @book.average_ratings %>" max=5>
+  <%= @book.average_ratings %>
+  </progress>
+</article>
 
-<progress class="progress is-success" value="<%= @book.average_ratings %>" max=5>
-<%= @book.average_ratings %>
-</progress>
+
 
 <p>
   <strong>Year published</strong>
