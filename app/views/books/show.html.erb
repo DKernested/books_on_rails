@@ -1,2 +1,24 @@
-<h1 class="title is-2"><%= @book.title %></h1>
+<h2 class="title is-2"><%= @book.title %></h2>
 
+<p class="mb-2">
+<%= link_to @book.author.name, @book.author %>
+</p>
+
+<p class="mb-5">
+  <strong>Rating</strong>
+  <%= @book.average_ratings  %> / 5 ⭐
+</p>
+
+<progress class="progress is-success" value="<%= @book.average_ratings %>" max=5>
+<%= @book.average_ratings %>
+</progress>
+
+<p>
+  <strong>Year published</strong>
+  <%= @book.year  %>
+</p>
+
+<p>
+  <strong>ISBN</strong>
+  <%= @book.isbn  %>
+</p>
