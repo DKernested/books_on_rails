@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= yield(:html_title) + " - " if content_for?(:html_title) %>Top 200 Books</title>
+    <title><%= yield(:html_title) + " - " if content_for?(:html_title) %>K6's Library</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,8 +15,12 @@
   <body>
     <section class="section">
       <div class="container">
-        <h1 class="title is-1"> <%= link_to "Top 200 Books", root_path %></h1>
+        <h1 class="title is-1"> <%= link_to "K6's Library", root_path %></h1>
         <%= yield %>
+
+        <% if controller_name == 'home' %>
+          <%= render partial: 'common/footer' %>
+        <% end %>
       </div>
     </section>
   </body>
