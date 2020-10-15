@@ -1,3 +1,6 @@
+
+
+
 <h2 class="title is-2">
   <% if show_link %>
     <%= link_to book.title, book %>
@@ -5,17 +8,6 @@
     <%= book.title %>
   <% end %>
 </h2>
-
-<article class="message is-primary">
-  <div class="message-header">
-    <p>Author</p>
-  </div>
-  <div class="message-body">
-    <p >
-      <%= link_to book.author.name, book.author %>
-    </p>
-  </div>
-</article>
 
 <article class="message is-dark">
   <div class="message-header">
@@ -30,9 +22,16 @@
   </progress>
 </article>
 
-
-
-<p>
+<article class="message is-primary">
+  <div class="message-header">
+    <p>Information</p>
+  </div>
+  <div class="message-body">
+    <p >
+      <strong>Author</strong>
+      <%= link_to book.author.name, book.author %>
+    </p>
+    <p>
   <strong>Year published</strong>
   <%= book.year  %>
 </p>
@@ -41,5 +40,9 @@
   <strong>ISBN</strong>
   <%= book.isbn  %>
 </p>
+  </div>
+</article>
+
+
 
 <hr>
