@@ -1,3 +1,19 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+/* override will-paginate margins */
+.pagination {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a{
+  margin: 5px;
+}
+
+.pagination em{
+  margin: 5px;
+}

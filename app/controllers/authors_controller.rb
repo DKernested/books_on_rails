@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
   def index
-    @authors = Author.ordered_by_books
+    @authors = Author.ordered_by_books.paginate(page: params[:page])
   end
 
   def show
