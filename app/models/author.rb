@@ -9,4 +9,13 @@ class Author < ApplicationRecord
         .group("authors.id")
         .order("book_count DESC")
   end
+
+  def self.search(search)
+    # logger.debug(search)
+    if search
+      Author.where("name LIKE ?", "%#{search}%").ordered_by_books
+    else
+      Author.ordered_by_books
+    end
+  end
 end

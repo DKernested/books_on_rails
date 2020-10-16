@@ -1,5 +1,12 @@
 <h2 class="title is-2">Authors</h2>
 
+<%= form_tag authors_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <ol class="ml-5">
   <%= render @authors %>
 </ol>

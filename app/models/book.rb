@@ -7,7 +7,7 @@ class Book < ApplicationRecord
   validates :average_ratings, numericality: true
 
   def self.search(search)
-    logger.debug(search)
+    # logger.debug(search)
     if search
       Book.where("title LIKE ?", "%#{search}%")
     else

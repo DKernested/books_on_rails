@@ -7,4 +7,6 @@
   </p>
 <% end %>
 
+
 <%= render partial: 'book', collection: @books, locals: { show_link: true } %>
+<%= will_paginate %>
