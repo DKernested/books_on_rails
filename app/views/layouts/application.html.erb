@@ -18,9 +18,9 @@
         <h1 class="title is-1"> <%= link_to "K6's Library", root_path %></h1>
         <%= yield %>
 
-        <% if controller_name == 'home' %>
+
           <%= render partial: 'common/footer' %>
-        <% end %>
+
       </div>
     </section>
   </body>
