@@ -1,6 +1,3 @@
-
-
-
 <h2 class="title is-2">
   <% if show_link %>
     <%= link_to book.title, book %>
@@ -14,12 +11,13 @@
     <p>Rating</p>
   </div>
   <div class="message-body">
-  <p class="mb-5">
-    <%= book.average_ratings  %> / 5 ⭐
-  </p>
-  <progress class="progress is-danger" value="<%= book.average_ratings %>" max=5>
-  <%= book.average_ratings %>
-  </progress>
+    <p class="mb-5">
+      <%= book.average_ratings  %> / 5 ⭐
+    </p>
+    <progress class="progress is-danger" value="<%= book.average_ratings %>" max=5>
+    <%= book.average_ratings %>
+    </progress>
+  </div>
 </article>
 
 <article class="message is-primary">
